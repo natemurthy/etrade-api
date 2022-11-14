@@ -1,0 +1,32 @@
+package com.etrade.exampleapp.v1.terminal;
+
+import com.etrade.exampleapp.config.OOauthConfig;
+import com.etrade.exampleapp.config.SandBoxConfig;
+import com.etrade.exampleapp.v1.oauth.OAuth1Template;
+import org.apache.log4j.Logger;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.io.PrintStream;
+
+
+public class AuthApp {
+
+    protected Logger log = Logger.getLogger(ETClientApp.class);
+
+    private AnnotationConfigApplicationContext ctx = null;
+
+    private final static PrintStream out = System.out;
+
+    private boolean isLive = false;
+
+    private void auth() {
+        OAuth1Template params = new OAuth1Template(context, message);
+
+    }
+
+
+    public static void main(String[] args) {
+        AuthApp app = new AuthApp();
+        app.init(false);
+    }
+}

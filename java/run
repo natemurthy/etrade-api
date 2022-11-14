@@ -1,0 +1,2 @@
+mvn exec:java -Dexec.mainClass="com.etrade.exampleapp.v1.terminal.ETClientApp" -Dexec.cleanupDaemonThreads="false" -e
+#mvn exec:java -Dexec.mainClass="com.etrade.exampleapp.v1.terminal.AuthApp" -Dexec.cleanupDaemonThreads="false" -e
