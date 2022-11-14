@@ -9,6 +9,7 @@ import (
 	"strings"
 
 	"github.com/dghubble/oauth1"
+	"github.com/pkg/browser"
 )
 
 var (
@@ -54,11 +55,11 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(authURL.String())
+	fmt.Println("Opening browser, navigating to", authURL.String())
+	browser.OpenURL(authURL.String())
 
 	fmt.Print("Enter oauth_verifier: ")
 	reader := bufio.NewReader(os.Stdin)
-	// ReadString will block until the delimiter is entered
 	verifierCode, err := reader.ReadString('\n')
 	if err != nil {
 		log.Fatalf("An error occurred while reading input. Please try again: %v", err)
