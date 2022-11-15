@@ -77,7 +77,7 @@ def oauth():
         #print(a, getattr(session, a))
 
     import urllib.parse
-    print('access_token_response', session.access_token_response)
+    print('access_token_response:', session.access_token_response)
     print('access_token:', session.access_token, urllib.parse.quote(session.access_token))
     print('access_token_secret:', session.access_token_secret, urllib.parse.quote(session.access_token_secret))
 
