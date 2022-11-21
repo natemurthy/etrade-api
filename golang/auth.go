@@ -34,9 +34,9 @@ func GenerateAuthURL(token, key, baseAuthURL string) (*url.URL, error) {
 func main() {
 	var endpoint oauth1.Endpoint
 
-	endpoint.RequestTokenURL = "https://apisb.etrade.com/oauth/request_token"
+	endpoint.RequestTokenURL = "https://api.etrade.com/oauth/request_token"
 	endpoint.AuthorizeURL = "https://us.etrade.com/e/t/etws/authorize"
-	endpoint.AccessTokenURL = "https://apisb.etrade.com/oauth/access_token"
+	endpoint.AccessTokenURL = "https://api.etrade.com/oauth/access_token"
 
 	config := oauth1.NewConfig(consumerKey, consumerSecret)
 	config.Endpoint = endpoint
